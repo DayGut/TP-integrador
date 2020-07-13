@@ -7,7 +7,7 @@ const homeController = {//va almacenar los metodos que voy a requerir en rutas
         res.write("BIENVENIDO A NUESTRO  CENTRO DE SUCURSALES :" + '\n\n');//imprime por pantalla
         res.write('Estas son nuestras sucursales \n\n')
         dbconcesionaria.forEach((element)=>{//recorre el JSON
-            res.write(element.sucursal + '\n\n')
+            res.write('' + element.sucursal + '\n\n')
         })
         res.end()
         }

@@ -10,7 +10,7 @@ const rutaSucursal = require("./routes/sucursales")//toma el dato de todo el con
 app.listen(3030, ()=>console.log('El servidor esta levantado'))
 app.use('/', rutaHome);//define la url luego indica donde esta el contenido dentro de la variable const rutaHome
 app.use('/sucursales', rutaSucursal);
-app.use('/marcas', rutaMarcas)
-
+app.use('/marcas', rutaMarcas);
+app.use('/autos', rutaAuto); 
 
 

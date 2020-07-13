@@ -26,20 +26,22 @@ const marcasController = {
      id:function(req, res){
     res.set({'content-type':'text/plain;charset=utf-8'})  
     let idMarcas = req.params.marca 
-    sucursal.forEach(function(sucursal){
-        sucursal.autos.forEach(function(auto){
-            if(auto.marcas == idMarcas){
+    db.forEach(function(element){
+        element.autos.forEach(function(auto){
+            if(auto.marca == idMarcas){
               
-              res.write('\n' + '----' + auto.marca)
-              res.write('\n\n')
-              res.write('Tu auto :' + auto.modelo)
-              res.write('\n\n')
-              res.write('Tu auto :' + auto.anios)
+              res.write('marcas : '+ auto.marca)
+              res.write('\n')
+              res.write('modelo : ' + auto.modelo)
+              res.write('\n')
+              res.write('año :' + auto.anio)
+              res.write('\n-----------------------\n')
             }
         })
     }) 
     res.end()
    },
+    
     
 }
 
